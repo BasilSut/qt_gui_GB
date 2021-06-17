@@ -1,0 +1,2 @@
+About this programm
+<br /><a href=\"http://www.example.com\">http://www.example.com</a>
