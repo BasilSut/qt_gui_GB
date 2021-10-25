@@ -13,8 +13,10 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
+
+
     ui->setupUi(this);
-    ui->radioButton_eng->clicked(true);
+    //ui->radioButton_eng->clicked(true);
     ui->pushButton_open->setText(tr("Open file"));
     ui->pushButton_open_only->setText(tr("Open only"));
     ui->pushButton_about->setText(tr("About this programm"));
@@ -34,9 +36,10 @@ void MainWindow::keyReleaseEvent(QKeyEvent *event)
         if(event->key() == Qt::Key_O)
            on_pushButton_open_clicked();
         if(event->key() == Qt::Key_Q)
-           //quit the programm
+           //quit the programm _______________________________________
         if(event->key() == Qt::Key_N){
-
+            //create a new file
+            __________________________________________
         }
     }
 
@@ -115,3 +118,15 @@ void MainWindow::on_pushButton_save_clicked()
     file.close();
 }
 
+/*
+void MainWindow::on_radioButton_ru_released()
+{
+    tra.load(":/qm/text_editor_ru_RU.qm");
+}
+
+
+void MainWindow::on_radioButton_eng_released()
+{
+    tra.load(":/qm/text_editor_eng_ENG.qm");
+}
+*/

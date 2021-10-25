@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/qm">
+        <file>text_editor_ru_RU.qm</file>
+        <file>text_editor_eng_ENG.qm</file>
+    </qresource>
+</RCC>

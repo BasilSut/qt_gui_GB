@@ -1,7 +1,7 @@
 #pragma once
 
 #include <QMainWindow>
-
+#include <QTranslator>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -14,6 +14,9 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    static QTranslator tra;
+
+
 protected:
     //void keyPressEvent(QKeyEvent* event) override;
     void keyReleaseEvent(QKeyEvent* event) override;
@@ -26,7 +29,11 @@ private slots:
     void on_pushButton_about_clicked();
 
     void on_pushButton_save_clicked();
+/*
+    void on_radioButton_ru_released();
 
+    void on_radioButton_eng_released();
+*/
 private:
     Ui::MainWindow *ui;
 };

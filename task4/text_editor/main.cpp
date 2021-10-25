@@ -17,7 +17,13 @@ int main(int argc, char *argv[])
             break;
         }
     }
+    QTranslator traRu,traEng;
+    traRu.load(":/qm/text_editor_ru_RU.qm");
+    traEng.load(":/qm/text_editor_eng_ENG.qm");
+
+    a.installTranslator(&traEng);
     MainWindow w;
+    w.setWindowTitle(MainWindow::tr("Text Editor"));
     w.show();
     return a.exec();
 }

@@ -19,7 +19,8 @@ FORMS += \
     mainwindow.ui
 
 TRANSLATIONS += \
-    text_editor_ru_RU.ts
+    text_editor_ru_RU.ts\
+    text_editor_eng_ENG.ts
 CODECFORSRC     = UTF-8
 CONFIG += lrelease
 CONFIG += embed_translations
@@ -30,4 +31,8 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
+    language.qrc \
     res.qrc
+
+DISTFILES += \
+    text_editor_eng_ENG.ts
