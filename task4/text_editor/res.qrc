@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/xml">
+        <file>build_test_editor/about.xml</file>
+    </qresource>
+</RCC>
