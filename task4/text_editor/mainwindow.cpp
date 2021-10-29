@@ -38,15 +38,30 @@ void MainWindow::keyReleaseEvent(QKeyEvent *event)
         if(event->key() == Qt::Key_Q)
            //quit the programm _______________________________________
         if(event->key() == Qt::Key_N){
+            on_pushButton_save_clicked();
+            //newFile();
             //create a new file
-            __________________________________________
+            //__________________________________________
         }
     }
 
 }
 
 
+void MainWindow::newFile(){
+    QFile nFile("./NEW_File.txt");
+    nFile.open(QIODevice::WriteOnly);
+    if(!nFile.open(QFile::WriteOnly | QFile::Text)){
+        QMessageBox::warning(this,"error", "file wasn't opened");
+    }
+    QTextStream input_data(&nFile);
+    QString txt = input_data.readAll();
+    ui->plainTextEdit->setPlainText(txt);
+    ui->plainTextEdit->setReadOnly(false);
+    ui->pushButton_save->setDisabled(false);
+    nFile.close();
 
+}
 
 void MainWindow::on_pushButton_open_clicked()
 {
@@ -59,8 +74,7 @@ void MainWindow::on_pushButton_open_clicked()
     QTextStream input_data(&file);
     QString txt = input_data.readAll();
     ui->plainTextEdit->setPlainText(txt);
-    ui->plainTextEdit->setReadOnly(false);
-    ui->pushButton_save->setDisabled(false);
+
 
     file.close();
 }

@@ -35,6 +35,7 @@ private slots:
     void on_radioButton_eng_released();
 */
 private:
+    void newFile();
     Ui::MainWindow *ui;
 };
 
